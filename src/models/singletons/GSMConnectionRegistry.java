@@ -1,4 +1,4 @@
-package models;
+package models.singletons;
 
 import enums.ConnectionType;
 

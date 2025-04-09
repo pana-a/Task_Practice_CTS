@@ -1,7 +1,11 @@
 import enums.ConnectionType;
 import enums.FeatureType;
-import models.GSMConnection;
-import models.GSMConnectionRegistry;
+import models.builders.Phone;
+import models.builders.PhoneBuilder;
+import models.features.Battery;
+import models.features.Compass;
+import models.singletons.GSMConnection;
+import models.singletons.GSMConnectionRegistry;
 import models.factories.AFactory;
 import models.factories.FactoryMethodFeature;
 import models.features.AFeature;
@@ -33,5 +37,16 @@ public class Main {
             System.out.println("Singleton registry functioneaza corect!");
         }
 
+        //Cerinta 4 - testare
+        System.out.println("\n");
+        Phone phone = new PhoneBuilder("Nokia", "beta")
+                .addBattery(
+                        (Battery) new FactoryMethodFeature().getFeature(FeatureType.BATTERY, "Baterie1", 150)
+                )
+                .addCompass(
+                        (Compass) new FactoryMethodFeature().getFeature(FeatureType.COMPASS, "Busola1", 35)
+                )
+                .build();
+        System.out.println(phone);
 }}
 

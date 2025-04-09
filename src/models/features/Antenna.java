@@ -10,6 +10,7 @@ public class Antenna extends AFeature{
         return "Antenna{" +
                 "name='" + name + '\'' +
                 ", price=" + price +
-                "} " + super.toString();
+                "} ";
     }
+
 }

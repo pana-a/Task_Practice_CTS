@@ -9,6 +9,8 @@ import models.singletons.GSMConnectionRegistry;
 import models.factories.AFactory;
 import models.factories.FactoryMethodFeature;
 import models.features.AFeature;
+import models.prototypes.OS;
+import models.prototypes.OSPrototypeFactory;
 
 public class Main {
     public static void main(String[] args){
@@ -49,7 +51,7 @@ public class Main {
                 .build();
         System.out.println(phone);
 
-        //Cerinta 5
+        //Cerinta 5 - testare
         System.out.println("\n");
         try{
             OS os = new OS(12);
@@ -62,7 +64,15 @@ public class Main {
             System.out.println(ex.getMessage());
         }
 
+        //Cerinta 6
+        System.out.println("\n");
+        try{
+            OS clonedOS2 = OSPrototypeFactory.getOS(1);
+            System.out.println(clonedOS2);
 
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
 
 }}
 

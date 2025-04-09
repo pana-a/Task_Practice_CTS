@@ -1,14 +1,13 @@
-import java.util.ArrayList;
-import java.util.List;
+package models.prototypes;
 
 public class OS implements Cloneable{
     int version = 0;
 
     public OS(int version) throws InterruptedException {
         this.version = version;
-        System.out.println("Building the OS v" + this.version + ".");
+        System.out.println("Building the models.prototypes.OS v" + this.version + ".");
         Thread.sleep(1000);
-        System.out.println("OS build finished.");
+        System.out.println("models.prototypes.OS build finished.");
     }
 
     @Override
@@ -18,7 +17,7 @@ public class OS implements Cloneable{
 
     @Override
     public String toString() {
-        return "OS{" +
+        return "models.prototypes.OS{" +
                 "version=" + version +
                 '}';
     }

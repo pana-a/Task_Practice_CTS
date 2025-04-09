@@ -11,7 +11,7 @@ import models.factories.FactoryMethodFeature;
 import models.features.AFeature;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
         //Cerinta 1 - testare
         AFactory factory = new FactoryMethodFeature();
@@ -48,5 +48,21 @@ public class Main {
                 )
                 .build();
         System.out.println(phone);
+
+        //Cerinta 5
+        System.out.println("\n");
+        try{
+            OS os = new OS(12);
+            OS osCloned = (OS) os.clone();
+
+            System.out.println(os);
+            System.out.println(osCloned);
+
+        } catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+
+
+
 }}
 
